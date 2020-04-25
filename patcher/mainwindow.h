@@ -2,7 +2,6 @@
 
 #include <QtGui>
 #include <QFile>
-//#include <bearparser/core.h>
 
 #include "Executables.h"
 
@@ -14,9 +13,18 @@
 #include "ExeController.h"
 #include "ReplacementsDialog.h"
 
+#ifndef QT_VERSION_MAJOR
+#define QT_VER_NUM 5
+#else
+#define QT_VER_NUM QT_VERSION_MAJOR
+#endif
+
+#define VERSION "0.3.5.3"
+#define MY_SITE_LINK "https://hasherezade.net/"
+#define LICENSE_TYPE "BSD-2"
+#define LICENSE_LINK "https://raw.githubusercontent.com/hasherezade/IAT_patcher/master/LICENSE"
 #define SITE_LINK "http://hasherezade.github.io/IAT_patcher/"
 #define ISSUES_LINK "https://github.com/hasherezade/IAT_patcher/issues"
-#define VERSION "0.3.5.2 Qt5"
 
 class ThreadCounter : public QObject
 {
